@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow - Organize Your Life</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray-950 text-gray-100 flex flex-col min-h-screen">
+
+  <!-- Hero Section -->
+  <header class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-10 text-center">
+    <h1 class="text-4xl md:text-6xl font-bold">TaskFlow</h1>
+    <p class="mt-4 text-lg md:text-xl">Stay organized. Get things done. Flow through your tasks effortlessly.</p>
+    <button class="mt-6 px-6 py-3 bg-white text-indigo-700 font-semibold rounded-lg shadow hover:bg-gray-100">
+      Get Started
+    </button>
+  </header>
+
+  <!-- Features Section -->
+  <section class="py-16 px-6 max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-10">Why Choose TaskFlow?</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 rounded-2xl p-6 shadow hover:shadow-lg transition">
+        <i data-lucide="check-circle" class="w-10 h-10 mx-auto text-indigo-400"></i>
+        <h3 class="mt-4 text-xl font-semibold">Easy Task Management</h3>
+        <p class="mt-2 text-gray-400">Create, edit, and organize your tasks with a simple and clean interface.</p>
+      </div>
+      <div class="bg-gray-800 rounded-2xl p-6 shadow hover:shadow-lg transition">
+        <i data-lucide="calendar" class="w-10 h-10 mx-auto text-purple-400"></i>
+        <h3 class="mt-4 text-xl font-semibold">Smart Scheduling</h3>
+        <p class="mt-2 text-gray-400">Plan ahead with built-in calendar tools and reminders.</p>
+      </div>
+      <div class="bg-gray-800 rounded-2xl p-6 shadow hover:shadow-lg transition">
+        <i data-lucide="users" class="w-10 h-10 mx-auto text-pink-400"></i>
+        <h3 class="mt-4 text-xl font-semibold">Team Collaboration</h3>
+        <p class="mt-2 text-gray-400">Share tasks with your team and track progress together.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="bg-gray-900 py-16 px-6">
+    <h2 class="text-3xl font-bold text-center mb-10">What Our Users Say</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-gray-800 p-6 rounded-xl shadow">
+        <p class="italic">“TaskFlow has completely changed the way I organize my day. Love it!”</p>
+        <p class="mt-4 font-semibold">– Sarah L.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow">
+        <p class="italic">“The collaboration feature keeps my team aligned and productive.”</p>
+        <p class="mt-4 font-semibold">– David K.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow">
+        <p class="italic">“Super clean design and very easy to use. Highly recommended.”</p>
+        <p class="mt-4 font-semibold">– Maria P.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="py-16 px-6 max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-10">Choose Your Plan</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Free -->
+      <div class="bg-gray-800 rounded-2xl p-8 shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold">Free</h3>
+        <p class="mt-2 text-gray-400">Perfect for personal use.</p>
+        <p class="mt-4 text-3xl font-bold">$0</p>
+        <ul class="mt-4 space-y-2 text-gray-400">
+          <li>✔ Basic task management</li>
+          <li>✔ Calendar view</li>
+          <li>✘ Team features</li>
+        </ul>
+        <button class="mt-6 w-full bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-lg font-semibold">
+          Get Started
+        </button>
+      </div>
+      <!-- Pro -->
+      <div class="bg-indigo-600 text-white rounded-2xl p-8 shadow-lg transform scale-105">
+        <h3 class="text-xl font-semibold">Pro</h3>
+        <p class="mt-2">For power users.</p>
+        <p class="mt-4 text-3xl font-bold">$9/mo</p>
+        <ul class="mt-4 space-y-2">
+          <li>✔ All Free features</li>
+          <li>✔ Advanced scheduling</li>
+          <li>✔ Priority support</li>
+        </ul>
+        <button class="mt-6 w-full bg-white text-indigo-700 hover:bg-gray-100 px-4 py-2 rounded-lg font-semibold">
+          Upgrade
+        </button>
+      </div>
+      <!-- Team -->
+      <div class="bg-gray-800 rounded-2xl p-8 shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold">Team</h3>
+        <p class="mt-2 text-gray-400">For small businesses.</p>
+        <p class="mt-4 text-3xl font-bold">$29/mo</p>
+        <ul class="mt-4 space-y-2 text-gray-400">
+          <li>✔ All Pro features</li>
+          <li>✔ Team collaboration</li>
+          <li>✔ Admin controls</li>
+        </ul>
+        <button class="mt-6 w-full bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-lg font-semibold">
+          Start Team Plan
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-8 mt-auto">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-gray-400">&copy; 2025 TaskFlow. All rights reserved.</p>
+      <div class="flex space-x-6 text-gray-400">
+        <a href="#"><i data-lucide="mail" class="w-5 h-5 hover:text-white"></i></a>
+        <a href="#"><i data-lucide="twitter" class="w-5 h-5 hover:text-white"></i></a>
+        <a href="#"><i data-lucide="facebook" class="w-5 h-5 hover:text-white"></i></a>
+        <a href="#"><i data-lucide="linkedin" class="w-5 h-5 hover:text-white"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
