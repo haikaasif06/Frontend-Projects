@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar Example</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray-900 text-gray-200 flex">
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="fixed left-0 top-0 h-full w-64 bg-gray-800/90 backdrop-blur-md shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out">
+    <div class="p-4 flex items-center justify-between border-b border-gray-700">
+      <div class="text-lg font-bold">🌙 Logo</div>
+      <button onclick="toggleSidebar()" class="p-2 rounded-lg hover:bg-gray-700">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <!-- Nav links -->
+    <nav class="flex flex-col p-4 space-y-4">
+      <a href="#" class="flex items-center gap-3 hover:bg-gray-700 p-2 rounded-lg transition">
+        <i data-lucide="home"></i> Home
+      </a>
+      <a href="#" class="flex items-center gap-3 hover:bg-gray-700 p-2 rounded-lg transition">
+        <i data-lucide="user"></i> Profile
+      </a>
+      <a href="#" class="flex items-center gap-3 hover:bg-gray-700 p-2 rounded-lg transition">
+        <i data-lucide="file-text"></i> Documents
+      </a>
+      <a href="#" class="flex items-center gap-3 hover:bg-gray-700 p-2 rounded-lg transition">
+        <i data-lucide="settings"></i> Settings
+      </a>
+      <a href="#" class="flex items-center gap-3 hover:bg-gray-700 p-2 rounded-lg transition">
+        <i data-lucide="help-circle"></i> Help
+      </a>
+    </nav>
+  </div>
+
+  <!-- Content area -->
+  <div class="flex-1 min-h-screen p-6">
+    <button onclick="toggleSidebar()" class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg shadow-md">
+      ☰ Menu
+    </button>
+    <h1 class="text-3xl font-bold mt-6">Main Content</h1>
+    <p class="mt-2 text-gray-400">Click the menu button to open and close the sidebar.</p>
+  </div>
+
+  <script>
+    const sidebar = document.getElementById("sidebar");
+    function toggleSidebar() {
+      sidebar.classList.toggle("-translate-x-full");
+    }
+    // load icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>
