@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href= "style.css">
+</head>
+<body>
+
+    <div class="box">
+            <h1>Contact Form</h1>
+        <form id="contactform">           
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter Your Name" id="name">
+       <div id="nameerror" style="color: red; font-size: small;"></div>
+        <label>Email Address</label>
+        <input type="text" placeholder="Enter Your Email" id="email">
+         <div id="emailerror" style="color: red; font-size: small;"></div>
+        <label>Subject</label>
+        <input type="text" placeholder="Enter Your Subject" id="subject">
+        <div id="subjecterror" style="color: red; font-size: small;"></div>
+        <label>Message</label>
+        <textarea placeholder="Enter Message" id="message"></textarea>
+         <div id="messageerror" style="color: red; font-size: small;"></div>
+        <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById("contactform");
+        form.addEventListener("submit" , function(e){
+            e.preventDefault();
+      
+        let flag=true;
+      const inputname=document.getElementById("name").value.trim();
+      if(inputname == ""){
+         document.getElementById("nameerror").innerText="Name is Required!";
+         flag=false;
+      }
+      else{
+        document.getElementById("nameerror").innerText="";
+      }
+      
+
+    const inputemail=document.getElementById("email").value;
+    const pattern=/@/ ; 
+    if(inputemail == ""){
+         document.getElementById("emailerror").innerText="Email is Required!";
+         flag=false;
+      }
+      else if(!inputemail.match(pattern))
+      {
+       document.getElementById("emailerror").innerText="Email must conatin @ ";
+         flag=false;
+      }
+      else{
+        document.getElementById("emailerror").innerText="";
+      }
+
+ // Subject check
+      const subject = document.getElementById("subject").value.trim();
+      if (subject === "") {
+        document.getElementById("subjecterror").innerText = "Subject is required!";
+        flag = false;
+      } else {
+        document.getElementById("subjecterror").innerText = "";
+      }
+
+      // Message check
+      const message = document.getElementById("message").value.trim();
+      if (message === "") {
+        document.getElementById("messageerror").innerText = "Message is required!";
+        flag = false;
+      } else {
+        document.getElementById("messageerror").innerText = "";
+      }
+
+      // Final check
+      if (flag) {
+        alert("Form submitted successfully!");
+        form.reset();
+      }
+        })
+    
+    </script>
+</body>
+</html>

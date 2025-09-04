@@ -1,0 +1,60 @@
+body{
+    background-color: plum;
+    margin: 0;
+    padding: 0;
+    display: flex;  
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+}
+
+.box{
+     display:flex;
+     flex-direction: column;
+     gap: 10px;
+     background: rgba(255, 0, 132, 0.2);
+     backdrop-filter:blur(20px);
+     border-radius: 20px;
+     justify-content: center;
+     align-items: center;
+     max-width: 400px;
+     width: 80%;
+     height: 80%;
+     margin: 20px;
+     padding: 30px;
+     color: rgb(108, 12, 66);
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-size: larger;
+}
+form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    font-size: medium;
+}
+input{
+    height: 30px;
+    box-sizing:border-box;
+}
+label{
+    font-size: larger;
+}
+button{
+     align-self: center;
+     padding: 5px 20px 5px 20px;
+     background-color: rgb(108, 12, 66);
+     font-size: larger;
+     color: white;
+     border: none;
+     border-radius: 8px;
+     cursor: pointer;
+    transition: 0.5s;
+}
+button:hover{
+   background: rgba(117, 91, 104, 0.856);
+    transform: scale(1.05);  
+    box-shadow: 0 0 10px 5px rgba(255,0,150,0.7);
+}
+    
